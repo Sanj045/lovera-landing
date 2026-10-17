@@ -64,9 +64,9 @@ export default function Features() {
                                     <span>Lượt tương tác</span>
                                     <span className="text-pink-500 font-bold">+124%</span>
                                 </div>
-                                <svg viewBox="0 0 200 50" className="w-full h-12">
+                                <svg viewBox="0 0 200 60" className="w-full h-16 overflow-visible">
                                     <motion.path
-                                        d="M0 40 Q 25 20, 50 30 T 100 10 T 150 20 T 200 5"
+                                        d="M0 50 Q 25 30, 50 40 T 100 15 T 150 30 T 200 10"
                                         fill="none"
                                         stroke="#F85D8F"
                                         strokeWidth="3"
