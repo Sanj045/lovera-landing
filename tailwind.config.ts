@@ -1,17 +1,32 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        pink: {
+          50: "#FFF5F8",
+          100: "#FFE4EC",
+          200: "#FFC9DA",
+          300: "#FFA3C1",
+          400: "#FF7BA5",
+          500: "#F85D8F",
+          600: "#E0407A",
+          700: "#B82E60",
+        },
+        cream: "#FFFBF7",
+      },
+      fontFamily: {
+        sans: ['"Be Vietnam Pro"', "system-ui", "sans-serif"],
+      },
+      animation: {
+        "float": "float 6s ease-in-out infinite",
+        "fade-up": "fadeUp 0.6s ease-out",
+      },
+      keyframes: {
+        float: { "0%,100%": { transform: "translateY(0)" }, "50%": { transform: "translateY(-12px)" } },
+        fadeUp: { "0%": { opacity: "0", transform: "translateY(20px)" }, "100%": { opacity: "1", transform: "translateY(0)" } },
       },
     },
   },
