@@ -17,7 +17,7 @@ export default function Footer() {
                             alt="LOVERA Logo"
                             width={32}
                             height={32}
-                            className="w-8 h-8 object-contain"
+                            className="w-12 h-12 object-contain"
                         />
                         <span className="gradient-text">LOVERA</span>
                     </div>

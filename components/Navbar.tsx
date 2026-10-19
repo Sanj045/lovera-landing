@@ -40,7 +40,7 @@ export default function Navbar() {
                         alt="LOVERA Logo"
                         width={32}
                         height={32}
-                        className="w-8 h-8 object-contain"
+                        className="w-12 h-12 object-contain"
                         priority
                     />
                     <span className="gradient-text">LOVERA</span>
