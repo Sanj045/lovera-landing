@@ -5,6 +5,7 @@ import { useLang } from "@/context/LanguageContext";
 import { dict } from "@/lib/i18n";
 import { trackEvent } from "@/lib/analytics";
 import { Menu, X, Globe, Heart } from "lucide-react";
+import Image from "next/image";
 
 export default function Navbar() {
     const { lang, setLang } = useLang();
@@ -34,9 +35,14 @@ export default function Navbar() {
             <nav className="max-w-6xl mx-auto px-5 flex items-center justify-between">
                 {/* Logo */}
                 <a href="#" className="flex items-center gap-2 font-extrabold text-xl" onClick={() => setOpen(false)}>
-                    <span className="w-8 h-8 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 grid place-items-center text-white">
-                        <Heart className="w-4 h-4 fill-white" />
-                    </span>
+                    <Image
+                        src="/logo.png"
+                        alt="LOVERA Logo"
+                        width={32}
+                        height={32}
+                        className="w-8 h-8 object-contain"
+                        priority
+                    />
                     <span className="gradient-text">LOVERA</span>
                 </a>
 

@@ -2,6 +2,7 @@
 import { useLang } from "@/context/LanguageContext";
 import { dict } from "@/lib/i18n";
 import { Heart } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
     const { lang } = useLang();
@@ -11,9 +12,13 @@ export default function Footer() {
             <div className="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
                 <div className="md:col-span-2">
                     <div className="flex items-center gap-2 font-extrabold text-xl">
-                        <span className="w-8 h-8 rounded-full bg-gradient-to-br from-pink-400 to-pink-600 grid place-items-center text-white">
-                            <Heart className="w-4 h-4 fill-white" />
-                        </span>
+                        <Image
+                            src="/logo.png"
+                            alt="LOVERA Logo"
+                            width={32}
+                            height={32}
+                            className="w-8 h-8 object-contain"
+                        />
                         <span className="gradient-text">LOVERA</span>
                     </div>
                     <p className="text-gray-500 text-sm mt-3 max-w-xs">{t.tagline}</p>
